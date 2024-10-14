@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        p,
+        label {
+            font:
+            1rem 'Fira Sans',
+            sans-serif;
+        }
+        
+        input {
+            margin: 0.4rem;
+        }
+        [type="radio"] {
+            margin: 0px;
+        }
+        input[type="radio"] + label {
+            font-size: 20px;
+        }
+    </style>
+    <script src="deck.gl@^8.0.0/dist.dev.js"></script>
+    <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="tripsLayer.css" />
+    <link rel="stylesheet" href="leaflet@1.9.4/dist/leaflet.css" />
+    <script src="leaflet@1.9.4/dist/leaflet.js" ></script>
+    <script src="deck.gl-leaflet@1.2.1/dist/deck.gl-leaflet.min.js"></script>
+    <script src='jinju_roads_geojson.js'></script>
+    <script src='single_trip.js'></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="map">
+        <div style="position: absolute; z-index: 500; top: 20px; right: 40px; color: white;">
+            <fieldset style="border: 3px solid white; background-color: RGBA(0, 45, 74, 0.9); padding-left: 20px; padding-bottom: 15px; width: 200px;">
+                <legend style="font-size: 30px; background-color: RGBA(0, 45, 74, 0.9);">Trips Layer</legend>
+              
+                <div style="display: flex; justify-content: center; align-items: start; flex-direction: column; margin-left: 15px;">
+                    <div>
+                        <input type="radio" id="all_trips" name="trips" />
+                        <label for="all_trips">1만대</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="one_trip_animation" name="trips" />
+                        <label for="one_trip_animation">1대</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="one_trip" name="trips" />
+                        <label for="one_trip">1대 일부분</label>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</body>ㄴ
+<script src="tripsLayer.js"></script>
+</html>
